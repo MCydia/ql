@@ -22,7 +22,7 @@
 
 
 ## 自助力的完整库（除了助力脚本外）
-ql repo https://github.com/feverrun/my_scripts.git "jd_|jx_|jddj|getCookie|getJDCookie" "activity|backUp|jd_dreamFactory|jd_factory|jd_plantBean|jd_health|jd_sgmh|jd_nzmh|jd_pet|jd_fruit|jd_cfd|jd_jxmc|jd_jxbean_exchange" "^(jd|JD|JS)[^_]|USER|sendNotify|utils"
+ql repo https://github.com/feverrun/my_scripts.git "jd_|jx_|jddj_|getCookie|getJDCookie" "backUp" "^(jd|JD|JS)[^_]|USER|sendNotify|utils"
 
 ## faker2的单纯助力脚本（其他脚本没拉取）(助力码机器人：JDShareCodebot)
 ## ql repo https://github.com/shufflewzc/faker2.git "jd_fruit|jd_jdfactory|jd_dreamFactory|jd_plantBean|jd_health|jd_pet|jd_petrw|jd_sgmh|jd_cfd|jd_jxmc" "activity|backUp|Coupon|enen|update|collect|game|shell|stock|getCoin|moreTask" "^jd[^_]|USER|function|utils|sendNotify|ZooFaker_Necklace.js|JDJRValidator_|package|sign_graphics_validate" "main"
