@@ -350,11 +350,12 @@ function sys_kongjian() {
 function install_ql() {
   ECHOG "正在安装青龙面板，请稍后..."
 docker run -dit \
--v $QL_PATH/ql:/ql/data \
--v $QL_PATH/ql/jd:/ql/data/jd \
-${NETWORK} \
---name qinglong \
---restart unless-stopped \
+  -v $QL_PATH/ql:/ql/data \
+  -v $QL_PATH/ql/jd:/ql/data/jd \
+  ${NETWORK} \
+  --name qinglong \
+  --hostname qinglong \
+  --restart unless-stopped \
 feverrun/qinglong:2.10.2
 
   docker restart qinglong > /dev/null 2>&1
