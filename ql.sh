@@ -358,7 +358,7 @@ docker run -dit \
 -v $QL_PATH/ql/repo:/ql/repo \
 -v $QL_PATH/ql/deps:/ql/deps \
 --name qinglong \
--restart unless-stopped \
+--restart always \
 feverrun/qinglong:2.10.2
 
   docker restart qinglong > /dev/null 2>&1
