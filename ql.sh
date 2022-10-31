@@ -350,7 +350,6 @@ function sys_kongjian() {
 function install_ql() {
   ECHOG "正在安装青龙面板，请稍后..."
 docker run -dit \
-docker run -dit \
   -v $QL_PATH/ql:/ql/data \
   -v $QL_PATH/ql/jd:/ql/data/jd \
   ${NETWORK} \
