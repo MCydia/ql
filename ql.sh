@@ -667,20 +667,20 @@ function OpenApi_Client() {
 function Google_Check() {
   export Google_Check=$(curl -I -s --connect-timeout 8 google.com -w %{http_code} | tail -n1)
   if [ ! "$Google_Check" == 301 ];then
-    export curlurl="https://cdn.jsdelivr.net/gh/281677160/ql@main"
+    export curlurl="https://cdn.jsdelivr.net/gh/MCydia/ql@main"
     export GithubProxyUrl="https://ghproxy.com/"
     ECHORR "访问谷歌失败，以下使用代理安装"
     sleep 2
     echo "
-    export curlurl="https://cdn.jsdelivr.net/gh/281677160/ql@main"
+    export curlurl="https://cdn.jsdelivr.net/gh/MCydia/ql@main"
     export GithubProxyUrl="https://ghproxy.com/"
     " > ${Current}/ghproxy.sh
     sed -i "s/^[ \t]*//g" ${Current}/ghproxy.sh
   else
-    export curlurl="https://raw.githubusercontent.com/281677160/ql/main"
+    export curlurl="https://raw.githubusercontent.com/MCydia/ql/main"
     export GithubProxyUrl=""
     echo "
-    export curlurl="https://raw.githubusercontent.com/281677160/ql/main"
+    export curlurl="https://raw.githubusercontent.com/MCydia/ql/main"
     export GithubProxyUrl=""
     " > ${Current}/ghproxy.sh
     sed -i "s/^[ \t]*//g" ${Current}/ghproxy.sh
@@ -799,7 +799,7 @@ memunvjdc() {
     docker exec -it qinglong bash -c "ql resetlet"
     sleep 2
     docker exec -it qinglong bash -c "ql check"
-    bash -c "$(curl -fsSL https://cdn.jsdelivr.net/gh/281677160/ql@main/timesync.sh)"
+    bash -c "$(curl -fsSL https://cdn.jsdelivr.net/gh/MCydia/ql@main/timesync.sh)"
     print_ok "命令执行完成"
   break
   ;;
@@ -888,7 +888,7 @@ memuqinglong() {
     docker exec -it qinglong bash -c "ql resetlet"
     sleep 2
     docker exec -it qinglong bash -c "ql check"
-    bash -c "$(curl -fsSL https://cdn.jsdelivr.net/gh/281677160/ql@main/timesync.sh)"
+    bash -c "$(curl -fsSL https://cdn.jsdelivr.net/gh/MCydia/ql@main/timesync.sh)"
     print_ok "命令执行完成"
   break
   ;;
