@@ -357,7 +357,7 @@ docker run -dit \
 -v $QL_PATH/ql/jbot:/ql/jbot \
 -v $QL_PATH/ql/repo:/ql/repo \
 -v $QL_PATH/ql/deps:/ql/deps \
--p 57000:5700 \
+-p 5700:5700 \
   --name qinglong \
   --hostname qinglong \
   --restart unless-stopped \
