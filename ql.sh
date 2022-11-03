@@ -350,9 +350,14 @@ function sys_kongjian() {
 function install_ql() {
   ECHOG "正在安装青龙面板，请稍后..."
 docker run -dit \
-  -v $QL_PATH/ql:/ql/data \
-  -v $QL_PATH/ql/jd:/ql/data/jd \
-  ${NETWORK} \
+-v $QL_PATH/ql/config:/ql/config \
+-v $QL_PATH/ql/log:/ql/log \
+-v $QL_PATH/ql/db:/ql/db \
+-v $QL_PATH/ql/scripts:/ql/scripts \
+-v $QL_PATH/ql/jbot:/ql/jbot \
+-v $QL_PATH/ql/repo:/ql/repo \
+-v $QL_PATH/ql/deps:/ql/deps \
+-p 57000:5700 \
   --name qinglong \
   --hostname qinglong \
   --restart unless-stopped \
